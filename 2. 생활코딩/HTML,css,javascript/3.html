@@ -3,31 +3,8 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8"/>
-  <script>
-    function setAtagColor(color) {
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while (i < alist.length) {
-        alist[i].style.color = color;
-        i = i + 1;
-      }
-    }
-    function setBackgroundColorAndColor(body, backColor, color) {
-      body.style.backgroundColor = backColor;
-      body.style.color = color;
-    }
-    function lampSwitch(self) {
-      var body = document.querySelector('body');
-      if (self.value === 'lampOff') {
-        setBackgroundColorAndColor(body,'black', 'white');
-        self.value = 'lampOn';
-        setAtagColor('yellow');
-      } else {
-        setBackgroundColorAndColor(body,'white', 'black');
-        self.value = 'lampOff';
-        setAtagColor('red');
-      }
-    }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="lampSwitch.js">
   </script>
 </head>
 <body>

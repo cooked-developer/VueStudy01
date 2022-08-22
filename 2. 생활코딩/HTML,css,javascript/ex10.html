@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Object</h1>
+<h2>Create</h2>
+<script>
+  var animals = {
+    "smallestAnimal": "mouse",
+    "biggestAnimal": "hippo"
+  };
+  document.write("biggestAnimal : " + animals.biggestAnimal + "<br>");
+  document.write("smallestAnimal : " + animals.smallestAnimal + "<br>");
+  animals.powerfulestAnimal = "bear";
+  document.write("powerfulestAnimal : " + animals.powerfulestAnimal + "<br>")
+  animals["cutest animal"] = "fox";
+  document.write("cutest animal : "+animals["cutest animal"]+"<br>")
+</script>
+<h2>Iterate</h2>
+<script>
+  for (var key in animals) {
+    document.write(key+' : '+animals[key] + '<br>');
+  }
+</script>
+<h2>Property & Method</h2>
+<script>
+  animals.showAll = function () {
+    for (var key in this) {
+      document.write(key+' : '+this[key] + '<br>');
+    }
+  };
+  animals.showAll();
+</script>
+</body>
+</html>
