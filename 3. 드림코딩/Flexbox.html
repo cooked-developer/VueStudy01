@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    .container {
+      background: beige;
+      height: 100vh;
+      /*<vh>*/
+      /*100vh : 부모에 상관없이 나는 아이템을 보이는 view height에 100%를 다 쓰겠다*/
+      display: flex; /* container한테 너 이제 flexbox야 하고 알려주는거. 이거 하면 아이템들이 왼쪽에서 오른쪽으로 상자가 정렬됨 */
+      flex-direction: row;
+      /*<flex-direction>*/
+      /*row : 왼쪽에서 오른쪽으로(중식축(기본축) : 열, x축, 수평축)*/
+      /*row-reverse : 오른쪽에서 왼쪽으로(중식축(기본축) : 열, x축, 수평축)*/
+      /*column : 위에서 아래쪽으로(중식축(기본축) : 행, y축, 수직축)*/
+      /*column-reverse : 아래에서 위쪽으로(중식축(기본축) : 행, y축, 수직축)*/
+      flex-wrap: wrap;
+      /*<flex-wrap>*/
+      /*nowrap : 기본값이다. 한줄에 아이템들이 꽉 차더라도, 창 크기를 줄여도 한줄에 다 붙어있다.*/
+      /*wrap : 아이템들이 한줄에 꽉 차게되면 자동적으로 다음 라인으로 넘어가는 것*/
+      /*wrap-reverse : 반대로 wrap된다*/
+
+      /* flex-flow: column nowrap; */
+      /*<flex-flow>*/
+      /* 특징 : item {border: 1px solid black;} 처럼 flex-direction과 flex-wrap을 합쳐서 쓸 수있는 것.*/
+      /* flex-flow: column nowrap;*/
+      justify-content: space-between;
+      /* <justify-content> (main axis)
+    : 중식축에서 아이템들을 어떻게 배치할건지를 결정하는 것. flex-direction의 아이템 순서는 유지하면서 왼쪽, 오른쪽, 위, 아래로 붙을지만 결정
+    flex-start: 기본값, flex-direction이 row,row-reverse 일시 왼쪽으로 배치
+                       flec-direction이 column,column-reverse 일시 위쪽으로 배치
+    flex-end: flex-direction이 row,row-reverse 일시 오른쪽으로 배치
+              flec-direction이 column,column-reverse 일시 밑쪽으로 배치
+    center: 아이템들을 센터로 배치
+    space-around: 박스를 둘러싸게 스페이스를 넣어준다.(대신 가외의 있는 두 아이템의 가외쪽 공간은 좀 얇다)
+    space-evenly: 박스를 둘러싸게 스페이스를 넣어준다.(모든 간격이 똑같다)
+    space-between: 박스를 둘러싸게 스페이스를 넣어준다.(가외는 화면에 맡게 붙어있고 중간 것에만 공간을 넣는다) */
+      align-items: baseline;
+      /* <align-items> (cross axis)
+    : 반대축에서 아이템들을 배치하는 속성값.
+    center : 수평축이 중식축이라고 한다면, 수평을 유지한채 수직으로 center에 배치
+    baseline : item1만 padding값이 20px 있다고 했을 떄 이걸 써주면 나머지 아이템들이 item1의 중식쪽 라인에 맞춰서 배치된다. */
+      align-content: space-between;
+      /* <align-content> (cross axis) <-> jsustify-content
+    : 반대축에서 아이템들을 어떻게 배치할건지를 결정하는 것.
+    space-between, ceneter 등등 justify-content의 속성값들을 똑같이 사용할 수 있다. */
+    }
+
+    .item {
+      width: 40px;
+      height: 40px;
+      border: 1px solid black;
+
+    }
+    .item1{
+      background: #e81e62;
+      /*padding: 20px;*/
+    }
+    .item2{
+      background: #ff608f;
+    }
+    .item3{
+      background: #af0039;
+    }
+    .item4{
+      background: #63a4ff;
+    }
+    .item5{
+      background: #1976d2;
+    }
+    .item6{
+      background: #004ba0;
+    }
+    .item7{
+      background: #ffeb3b;
+    }
+    .item8{
+      background: #ffff72;
+    }
+    .item9{
+      background: #c8b900;
+    }
+    .item10{
+      background: #bf360c;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 일일이 타이핑하지말고
+div.container>item.item${$}*10 입력후 Tap키 누르면
+자동으로 생성된다. -->
+
+<div class="container">
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
+  <div class="item item5">5</div>
+  <div class="item item6">6</div>
+  <div class="item item7">7</div>
+  <div class="item item8">8</div>
+  <div class="item item9">9</div>
+  <div class="item item10">10</div>
+
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
+  <div class="item item5">5</div>
+  <div class="item item6">6</div>
+  <div class="item item7">7</div>
+  <div class="item item8">8</div>
+  <div class="item item9">9</div>
+  <div class="item item10">10</div>
+</div>
+
+
+
+</body>
+</html>
